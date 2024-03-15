@@ -51,6 +51,7 @@ if selection == "s":
     1. Hamburguesa sencilla
     2. Hamburguesa doble
     3. Hamburguesa ranchera
+    4. Hamburguesa vegetariana
     """)
     main_course = int(input("Seleccione una opción: "))
     if main_course == 1:
@@ -62,6 +63,9 @@ if selection == "s":
     elif main_course == 3:
         print("Hamburguesa ranchera seleccionada")
         order.add_item(MainCourse(20000, 200, "Hamburguesa ranchera", int(input("Cantidad: "))))
+    elif main_course == 4:
+        print("Hamburguesa vegetariana seleccionada")
+        order.add_item(MainCourse(18000, 200, "Hamburguesa vegetariana", int(input("Cantidad: "))))
 
 
 selection = input("¿Desea ordenar una entrada? (s/n): ")
