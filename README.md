@@ -349,5 +349,8 @@ order.print_bill()
 
 
 ```
+### Explicación:
+
+Como se mostró en el diagrama de clases, se definieron las clases respectivas para unos productos de un restaurante de hamburguesas. La idea fue crear una interfaz sencilla para que el usuario pudiese escoger los productos y la respectiva cantidad a pedir. Para esto se establecieron 
 
 
