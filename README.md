@@ -233,6 +233,8 @@ Para el ejercicio del restaurante se pensó en un establecimiento de hamburguesa
 ## 4. Escenario Restaurante 
 
 ```python
+
+
 class Order():
     def __init__(self) -> None:
         self.items = []
@@ -285,6 +287,7 @@ if selection == "s":
     1. Hamburguesa sencilla
     2. Hamburguesa doble
     3. Hamburguesa ranchera
+    4. Hamburguesa vegetariana
     """)
     main_course = int(input("Seleccione una opción: "))
     if main_course == 1:
@@ -296,6 +299,9 @@ if selection == "s":
     elif main_course == 3:
         print("Hamburguesa ranchera seleccionada")
         order.add_item(MainCourse(20000, 200, "Hamburguesa ranchera", int(input("Cantidad: "))))
+    elif main_course == 4:
+        print("Hamburguesa vegetariana seleccionada")
+        order.add_item(MainCourse(18000, 200, "Hamburguesa vegetariana", int(input("Cantidad: "))))
 
 
 selection = input("¿Desea ordenar una entrada? (s/n): ")
@@ -347,10 +353,9 @@ else:
 
 order.print_bill()
 
-
 ```
 ### Explicación:
 
-Como se mostró en el diagrama de clases, se definieron las clases respectivas para unos productos de un restaurante de hamburguesas. La idea fue crear una interfaz sencilla para que el usuario pudiese escoger los productos y la respectiva cantidad a pedir. Para esto se establecieron 
+Como se mostró en el diagrama de clases, se definieron las clases respectivas para unos productos de un restaurante de hamburguesas. La idea fue crear una interfaz sencilla para que el usuario pudiese escoger los productos y la respectiva cantidad a pedir. Para esto se establecieron 10 productos entre platos principales, bebidas y entradas/acompañamiento. Una vez seleccionado cada producto, el programa instancia cada uno de los productos en su respectiva clase y con cada uno de sus atributos. Luego, estos productos se van guardando en una lista que se define en la clase Order mediante un método add_items. Para calcular el precio se definió un método que recorriera la lista de productos, y multiplicara el valor por la cantidad de alimentos solicitada por el cliente. Adicional a esto, se creó un méotodo que calculara un respectivo descuento en caso de que el cliente contase con un cupón de algún porcentaje en específico.
 
 
